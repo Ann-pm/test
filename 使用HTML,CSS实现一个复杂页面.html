@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body,input,p,h4,h3,h5,h6,ul,select {
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border: none;
+            vertical-align:top;
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        .clear{
+            zoom: 1;
+        }
+        .clear:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        #header{
+            width: 100%;
+            height: 46px;
+            background: #2189bf ;
+            padding-left: 13%;
+            padding-top: 10px;
+        }
+        #header .logo{
+            width: 36px;
+            height: 36px;
+            float: left;
+            background: url("images/f_header.PNG") no-repeat;
+        }
+        #header .search{
+            width: 320px;
+            height: 34px;
+            position: absolute;
+            right: 12%;
+            padding-left: 40px;
+            line-height: 56px;
+            background: url("images/f_header.PNG") no-repeat -37px 0;
+            border: none;
+        }
+        #header .login{
+            width: 52px;
+            height: 32px;
+            padding-left: 17px;
+            position: absolute;
+            right: 6%;
+            background: url("images/f_header.PNG") no-repeat -377px 0;
+        }
+        #header .login a{
+            font-size: 12px;
+            color: #ffffff;
+            line-height: 36px;
+            font-family: "黑体";
+        }
+        #container {
+            width: 1280px;
+            height: 1210px;
+            margin: 0 auto;
+        }
+        #container .left{
+            float: left;
+            width: 260px;
+            height: 1210px;
+            background: #2a2e3d;
+        }
+        .left .info{
+            padding: 20px 80px 22px 48px;
+        }
+        .left .info .name{
+            margin-bottom: 22px;
+        }
+        .left .info img{
+            float: left;
+            margin-right: 20px;
+        }
+        .left .info h4{
+            color: #f6f5f5;
+            font-size: 16px;
+            line-height:56px;
+            font-weight: normal;
+            font-family: "黑体";
+        }
+        .left .info p{
+            font-size: 12px;
+            color: #6e8095;
+            font-family: "宋体";
+        }
+        .left .info .collect{
+            float: left;
+            width: 28px;
+            height: 30px;
+            padding:0 26px 0 20px;
+            border-right: 2px solid #364050;
+            margin-right: 26px;
+        }
+        .left .tabs li{
+            padding-left: 48px;
+        }
+        .tabs h3,h4,h5{
+            color: #6e8095;
+            font-size: 12px;
+            font-family: "黑体";
+            line-height: 48px;
+        }
+        .left .tabs span{
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 14px;
+        }
+        .tabs .p_report{
+            background: url("images/f_tab.PNG") no-repeat 0 2px;
+        }
+        .tabs .p_collect{
+            background: url("images/f_tab.PNG") no-repeat -134px 2px;
+        }
+        .tabs .p_share{
+            background: url("images/f_tab.PNG") no-repeat -149px 2px;
+        }
+        .tabs .p_image{
+            background: url("images/f_tab.PNG") no-repeat -134px 2px;
+        }
+        .tabs .p_record{
+            background: url("images/f_tab.PNG") no-repeat -134px 2px;
+        }
+        .tabs .p_info{
+            background: url("images/f_tab.PNG") no-repeat -164px 2px;
+        }
+        .left .tabs .l_active{
+            background: #393e4e;
+        }
+        .l_active ul{
+            margin: -10px 0 0 -20px;
+        }
+        .l_active ul li ul{
+            margin: 2px 0 0 -9px;
+        }
+        .l_active ul li h4,.l_active ul li h5{
+            font-size: 12px;
+            line-height: 30px;
+        }
+        #container .active{
+            color: #ededef;
+        }
+        #container .icon1{
+            width: 34px;
+            height: 14px;
+            margin-right: 5px;
+            background: url("images/f_tab.PNG") no-repeat -16px 2px;
+        }
+        #container .icon2{
+            width: 34px;
+            height: 14px;
+            margin-right: 5px;
+            background: url("images/f_tab.PNG") no-repeat -60px 2px;
+        }
+        #container .icon3{
+            margin-right: 3px;
+            background: url("images/f_tab.PNG") no-repeat -102px 2px;
+        }
+        #container .icon4{
+            margin-right: 3px;
+            background: url("images/f_tab.PNG") no-repeat -118px 2px;
+        }
+        #container .icon5{
+            width: 34px;
+            height: 14px;
+            margin-right: 5px;
+             background: url("images/f_tab.PNG") no-repeat -16px 2px;
+         }
+        .right{
+            width: 1020px;
+            float: left;
+        }
+        .right .nav{
+            padding-left: 30px;
+        }
+        .right .nav p{
+            font-size: 12px;
+            color: #aaaaaa;
+            font-family: "黑体";
+            line-height: 30px;
+        }
+        .right .nav p span{
+            color: #6898c2;
+        }
+        .box{
+            width: 950px;
+            height: 1160px;
+            background: #eeeeed;
+            padding: 20px 70px 0 60px;
+        }
+        .box .search{
+            width: 918px;
+            height: 78px;
+            background: #fff;
+            border: 1px solid #e5e6e6;
+            padding: 18px 0 0 30px;
+        }
+        .box .search ul li{
+            float: left;
+        }
+        .box .search li div {
+            margin-right: 36px;
+            margin-bottom: 4px;
+        }
+        .box .search li p{
+            font-size: 12px;
+            color: #aaaaaa;
+            font-family: "黑体";
+            float: left;
+            margin-right: 16px;
+            line-height: 28px;
+        }
+        .box .search li select{
+            padding-left: 6px;
+            height: 24px;
+            font-size: 12px;
+            font-family: "黑体";
+            color: #323333;
+        }
+        .box .f_sale {
+            background: url("images/sale.PNG") no-repeat 164px 10px;
+            padding-right: 30px;
+        }
+        .box .f_sale select{
+            width: 118px;
+        }
+        .box .data select{
+            float: left;
+            margin-right: 14px;
+        }
+        .box .data .f_date {
+            width: 118px;
+        }
+        .box .data .f_time{
+            width: 70px;
+        }
+        .box .data .f_number{
+            width: 70px;
+        }
+        .box .data .f_item{
+            width: 120px;
+        }
+        .box .search input[type=button]{
+            width: 50px;
+            height: 26px;
+            color: #fff;
+            background: #388ac1;
+            border: none;
+            font-size: 12px;
+            font-family: "黑体";
+            margin-top: 16px;
+            margin-left: -12px;
+            cursor: pointer;
+        }
+        .query{
+            width: 910px;
+            height: 66px;
+            margin-top: 10px;
+            position: relative;
+            padding-left: 38px;
+        }
+        .query a,.query li{
+            border-top: 1px solid #cacdd1;
+            border-left: 1px solid #cacdd1;
+            background: #fff;
+        }
+        .query a{
+            font-size: 28px;
+            line-height: 64px;
+            font-weight:bold;
+            text-align: center;
+            width: 28px;
+            height: 64px;
+            color: #c5c5c4;
+            position: absolute;
+            top: 0;
+        }
+        .prev{
+            left: 0;
+        }
+        .next{
+            right: 164px;
+        }
+        .query li {
+            width: 86px;
+            height: 54px;
+            float: left;
+            margin-right: 8px;
+            padding: 10px 0 0 24px;
+        }
+        .query li h6{
+            color: #323333;
+            font-size: 12px;
+            font-family: "微软雅黑";
+            margin-bottom: 4px;
+        }
+        .query li p{
+            color: #ec6500;
+            font-size: 21px;
+            font-family: "微软雅黑";
+            padding-left: 12px;
+            background: url("images/f_money.PNG") no-repeat -2px 9px;
+        }
+        .query .f_query{
+            width: 94px;
+            height: 64px;
+            padding-left: 60px;
+            line-height: 66px;
+            position: absolute;
+            right: 0;
+            background: url("images/f_query.PNG") no-repeat 18px 18px #fff;
+            border-top: 1px solid #cacdd1;
+            border-left: 1px solid #cacdd1;
+            color: #535353;
+            font-size: 12px;
+            font-family: "微软雅黑";
+        }
+        .count{
+            padding-top: 18px;
+        }
+        .count h4{
+            font-size: 12px;
+            color: #323333;
+            font-family: "微软雅黑";
+            font-weight: normal;
+            line-height: 26px;
+        }
+        .count ul li{
+            float: left;
+            width: 204px;
+            height: 58px;
+            border: 1px solid #d3d4d7;
+            margin-right: 28px;
+            background: #fff;
+            padding: 12px 0 0 8px;
+            position: relative;
+        }
+        .count ul li:last-child{
+            margin-right: 0;
+        }
+        .count ul .f_green{
+            border-left: 4px solid #43b29e;
+        }
+        .count ul .f_blue{
+            border-left: 4px solid #388ac1;
+        }
+        .count ul .f_red{
+            border-left: 4px solid #d04a36;
+        }
+        .count ul .f_yellow{
+            border-left: 4px solid #e2cd47;
+        }
+        .count ul li p{
+            color: #aaaaaa;
+            font-size: 10px;
+            font-family: "黑体";
+            line-height: 24px;
+        }
+        .count ul li .f_count{
+            color: #323333;
+            font-size: 12px;
+            font-family: "黑体";
+            line-height: 24px;
+        }
+        .count ul li div{
+            width: 60px;
+            height: 46px;
+            position: absolute;
+            right:14px ;
+            top:14px;
+        }
+        .fd_green{
+            background: #43b29e;
+        }
+        .fd_blue{
+            background: #388ac1;
+        }
+        .fd_red{
+            background:#d04a36 ;
+        }
+        .fd_yellow{
+            background:#e2cd47 ;
+        }
+        .project{
+            width:950px;
+            height: 360px;
+            margin-top: 12px;
+        }
+        .fp_left, .fp_right,.calendar, .ranking{
+            background: #fff;
+            height: 356px;
+            border: 1px solid #ced0d3;
+            border-radius: 12px;
+        }
+        .fp_left{
+            float: left;
+            width: 554px;
+        }
+        .fp_right{
+            float: right;
+            width: 374px;
+        }
+        .fp_left h3,.fp_right h3,.calendar h3,.ranking h3{
+            background: #f4f5f6;
+            line-height: 40px;
+            border-bottom: 1px solid #e7e8eb;
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+            padding-left: 20px;
+            color: #aaaaaa;
+            font-size: 12px;
+            font-family: "黑体";
+            font-weight: normal;
+        }
+        .fp_nav{
+            margin: 12px 0 0 20px;
+        }
+        .fp_nav li h4{
+            background: #ececef;
+            float: left;
+            width: 86px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            color: #535353;
+            font-size: 12px;
+            font-family: "微软雅黑";
+            margin: 0 4px;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+        .fp_wrap{
+            width: 470px;
+            height: 222px;
+            border: 1px solid #ced0d3;
+            border-radius: 4px;
+            padding: 28px 0 0 36px;
+            margin: 40px 0 0 20px;
+        }
+        .fp_table{
+            width: 430px;
+            height: 190px;
+            border-collapse: collapse;
+        }
+        .fp_table tr td{
+            text-align: center;
+            border: 1px solid #dddddd;
+            color: #535353;
+            font-size: 12px;
+            font-family: "宋体";
+        }
+        .fp_table tr td:hover{
+            background: #f4f5f6;
+        }
+        .fp_left ul li .item_active{
+            border: 1px solid #dddddd;
+            border-bottom: none;
+            background: #fff;
+            margin-left: 0;
+            height: 29px;
+        }
+        .fp_right ul{
+            padding: 18px 0 0 34px;
+            position: relative;
+        }
+        .fp_right ul li{
+            height: 42px;
+            width: 282px;
+            padding:0 0 6px 14px;
+            border-bottom: 1px solid #dddddd;
+        }
+        .fp_right ul li:last-child{
+            height: 114px;
+        }
+        .fp_right ul .fp_float{
+            position: absolute;
+            left: 136px;
+            top: 67px;
+            border-bottom: none;
+            border-left: 1px solid #dddddd;
+        }
+        .fp_right ul li h5{
+            color: #c3c2c2;
+            font-size: 12px;
+            font-family: "微软雅黑";
+            font-weight: normal;
+            line-height: 20px;
+        }
+        .fp_right ul li p{
+            color: #535353;
+            font-size: 12px;
+            font-family: "微软雅黑";
+            line-height: 20px;
+        }
+        .fp_right form{
+            padding: 10px 0 0 34px;
+            float: left;
+        }
+        .fp_right form span{
+            color: #c3c2c2;
+            font-size: 12px;
+            font-family: "微软雅黑";
+            margin-left: 10px;
+        }
+        .fp_search{
+            padding:6px 44px 0 0;
+        }
+        .fp_right input[type=button]{
+            width: 50px;
+            height: 26px;
+            background: #388ac1;
+            border: none;
+            color: #fff;
+            font-size: 12px;
+            font-family: "黑体";
+            float: right;
+        }
+        .c_rank{
+            margin-top: 12px;
+        }
+        .calendar{
+            width:374px;
+            float: left;
+        }
+        .ranking{
+            width: 554px;
+            float: right;
+        }
+        .c_box{
+            padding: 10px 18px;
+        }
+        .c_select li{
+            float: left;
+            margin:0  5px 8px 0;
+        }
+        .c_select li select{
+            height: 24px;
+            color: #535353;
+            font-size: 12px;
+            font-family: "黑体";
+            padding: 2px 7px;
+        }
+        .c_week{
+            width: 332px;
+            height: 30px;
+            border-top: 1px solid #a9cfec;
+            border-bottom: 1px solid #e1e2e2;
+
+        }
+        .c_week li{
+            width: 47px;
+            height: 30px;
+            float: left;
+            line-height: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #535353;
+            font-family: "黑体";
+        }
+        .cr_table{
+            width:332px;
+            height: 226px;
+            text-align: center;
+            color: #323333;
+            font-size: 12px;
+            font-family: "黑体";
+        }
+        .cr_holiday{
+            color: #c9161d;
+        }
+        .cr_selected{
+            border: 1px solid #f7d156;
+        }
+        .ranking{
+
+        }
+        .ranking table{
+            margin: 18px 0 0 40px;
+            border-collapse: collapse;
+            width: 448px;
+            height: 276px;
+            text-align: center;
+
+        }
+        .ranking table td,.ranking table th{
+            border: 1px solid #dddddd;
+            line-height: 24px;
+            font-family: "黑体";
+        }
+        .ranking table .cr_last td{
+            border-bottom:none;
+        }
+        .ranking table th{
+            color: #231815;
+            font-size: 13px;
+        }
+        .ranking table td{
+            color: #323333;
+            font-size: 12px;
+        }
+        .ranking table span{
+            float: left;
+            padding-left: 34px;
+        }
+        .cr_bar{
+            width: 166px;
+            height: 4px;
+            background: #dcdcdc;
+        }
+        .ranking table tr td:nth-child(3),.ranking table .cr_none3{
+            width: 104px;
+            border-right: none;
+        }
+        .ranking table .cr_none {
+            width: 190px;
+            border-left: none;
+        }
+        .ranking table div div{
+            height: 4px;
+            background: #7fcbf0;
+        }
+        .ranking table div .cr_one{width: 142px; background:#ec6e51; }
+        .ranking table div .cr_two{width: 120px; background: #ef8150;}
+        .ranking table div .cr_three{width: 104px; background: #f19f4f;}
+        .cr_four{width: 96px;}
+        .cr_five{width: 86px;}
+        .cr_six{width: 80px;}
+        .cr_seven{width: 74px;}
+        .cr_eight{width: 64px;}
+        .cr_nine{width: 60px;}
+        .cr_ten{width: 52px;}
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div id="header">
+            <div class="logo"></div>
+            <input type="search" class="search"/>
+            <div class="login">
+                <a href="#">登录</a>
+            </div>
+        </div>
+        <div id="container">
+            <div class="left">
+                <div class="info">
+                    <div class="name clear">
+                        <img src="images/f_pic.PNG" />
+                        <h4>ABC123</h4>
+                    </div>
+                    <div class="collect"><p>110</p><p>收藏</p></div>
+                    <div class="fans"><p>313</p><p>粉丝</p></div>
+                </div>
+                <ul class="tabs">
+                    <li class="l_active">
+                        <h3 class="active"><span class="p_report"></span>个人报表</h3>
+                        <ul>
+                            <li><h4><span class="icon1"></span>文件一</h4></li>
+                            <li>
+                                <h4 class="active"><span class="icon2"></span>文件二</h4>
+                                <ul>
+                                    <li><h5 class="active"><span class="icon3"></span>文档1</h5></li>
+                                    <li><h5><span class="icon4"></span>文档2</h5></li>
+                                </ul>
+                            </li>
+                            <li><h4><span class="icon5"></span>文件三</h4></li>
+                        </ul>
+                    </li>
+                    <li><h3><span class="p_collect"></span>个人收藏</h3></li>
+                    <li><h3><span class="p_share"></span>我的分享</h3></li>
+                    <li><h3><span class="p_image"></span>图库</h3></li>
+                    <li><h3><span class="p_record"></span>成长记录</h3></li>
+                    <li><h3><span class="p_info"></span>账户信息</h3></li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="nav">
+                    <p>C站&nbsp;/&nbsp;个人报表&nbsp;/&nbsp;文件一&nbsp;/&nbsp;<span>文档一</span></p>
+                </div>
+                <div class="box">
+                    <div class="search">
+                        <ul>
+                            <li>
+                                <div>
+                                    <p>查询项</p>
+                                    <select>
+                                        <option>第一项</option>
+                                        <option>第二项</option>
+                                        <option>第三项</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="f_sale">
+                                <div class="clear">
+                                    <p>买方</p>
+                                    <select>
+                                        <option>小A</option>
+                                        <option>小B</option>
+                                        <option>小C</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>卖方</p>
+                                    <select>
+                                        <option>小C</option>
+                                        <option>小B</option>
+                                        <option>小A</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="data">
+                                <div class="clear">
+                                    <p>日期</p>
+                                    <select class="f_date">
+                                        <option>2016-04-01</option>
+                                        <option>2017-03-21</option>
+                                        <option>2018-01-24</option>
+                                    </select>
+                                    <p>总耗时</p>
+                                    <select class="f_time">
+                                        <option>8天</option>
+                                        <option>9天</option>
+                                        <option>10天</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>人数</p>
+                                    <select class="f_number">
+                                        <option>10人</option>
+                                        <option>20人</option>
+                                        <option>30人</option>
+                                    </select>
+                                    <p>成交项</p>
+                                    <select class="f_item">
+                                        <option>8项</option>
+                                        <option>9项</option>
+                                        <option>10项</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                        <input type="button" value="搜索">
+                    </div>
+                    <div class="query">
+                        <a href="#" class="prev">&lt;</a>
+                        <ul>
+                            <li>
+                                <h6>10:00 am</h6>
+                                <p>1200</p>
+                            </li>
+                            <li>
+                                <h6>10:00 am</h6>
+                                <p>1200</p>
+                            </li>
+                            <li>
+                                <h6>10:00 am</h6>
+                                <p>1200</p>
+                            </li>
+                            <li>
+                                <h6>10:00 am</h6>
+                                <p>1200</p>
+                            </li>
+                            <li>
+                                <h6>10:00 am</h6>
+                                <p>1200</p>
+                            </li>
+                            <li>
+                                <h6>10:00 am</h6>
+                                <p>1200</p>
+                            </li>
+                        </ul>
+                        <a href="#" class="next">&gt;</a>
+                        <p class="f_query">历史查询</p>
+                    </div>
+                    <div class="count clear">
+                        <h4>2016年4月份统计</h4>
+                        <ul>
+                            <li class="f_green">
+                                <p class="f_count">133311</p>
+                                <p>成交量</p>
+                                <div class="fd_green"></div>
+                            </li>
+                            <li class="f_blue">
+                                <p class="f_count">133311</p>
+                                <p>成交量</p>
+                                <div class="fd_blue"></div>
+                            </li>
+                            <li class="f_red">
+                                <p class="f_count">133311</p>
+                                <p>成交量</p>
+                                <div class="fd_red"></div>
+                            </li>
+                            <li class="f_yellow">
+                                <p class="f_count">133311</p>
+                                <p>成交量</p>
+                                <div class="fd_yellow"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project">
+                        <div class="fp_left">
+                            <h3>第一组项目</h3>
+                            <ul class="fp_nav">
+                                <li><h4 class="item_active">项目一</h4></li>
+                                <li><h4>项目二</h4></li>
+                                <li><h4>项目三</h4></li>
+                                <li><h4>项目四</h4></li>
+                                <li><h4>项目五</h4></li>
+                            </ul>
+                            <div class="fp_wrap">
+                                <table class="fp_table">
+                                    <tr>
+                                        <td>购买材料一</td>
+                                        <td>购买材料一</td>
+                                        <td>购买材料一</td>
+                                        <td>购买材料一</td>
+                                    </tr>
+                                    <tr>
+                                        <td>购买材料二</td>
+                                        <td>购买材料二</td>
+                                        <td>购买材料二</td>
+                                        <td>购买材料二</td>
+                                    </tr>
+                                    <tr>
+                                        <td>购买材料四</td>
+                                        <td>购买材料四</td>
+                                        <td>购买材料四</td>
+                                        <td>购买材料四</td>
+                                    </tr>
+                                    <tr>
+                                        <td>购买材料六</td>
+                                        <td>购买材料六</td>
+                                        <td>购买材料六</td>
+                                        <td>购买材料六</td>
+                                    </tr>
+                                    <tr>
+                                        <td>购买材料十三</td>
+                                        <td>购买材料十三</td>
+                                        <td>购买材料十三</td>
+                                        <td>购买材料十三</td>
+                                    </tr>
+                                    <tr>
+                                        <td>购买材料二十</td>
+                                        <td>购买材料二十</td>
+                                        <td>购买材料二十</td>
+                                        <td>购买材料二十</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="fp_right">
+                            <h3>第一组项目</h3>
+                            <ul>
+                                <li>
+                                    <h5>标题</h5>
+                                    <p>项目报表三</p>
+                                </li>
+                                <li>
+                                    <h5>价格</h5>
+                                    <p>￥158</p>
+                                </li>
+                                <li  class="fp_float">
+                                    <h5>负责人</h5>
+                                    <p>小A</p>
+                                </li>
+                                <li>
+                                    <h5>详细描述</h5>
+                                    <p>该项目目前负责人是....</p>
+                                </li>
+                            </ul>
+                            <form>
+                            <input type="checkbox" checked="checked"><span>遵守保密协议</span>
+                            </form>
+                            <div class="fp_search"><input type="button" value="搜索"></div>
+                        </div>
+                    </div>
+                    <div class="c_rank">
+                        <div class="calendar">
+                            <h3>日历</h3>
+                            <div class="c_box">
+                                <ul class="c_select clear">
+                                    <li>
+                                        <select>
+                                            <option>2016年</option>
+                                            <option>2017年</option>
+                                            <option>2018年</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select>
+                                            <option>4月</option>
+                                            <option>5月</option>
+                                            <option>6月</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select>
+                                            <option>标注日期</option>
+                                            <option>开始日期</option>
+                                            <option>结束日期</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select>
+                                            <option>返回今天</option>
+                                            <option>返回上月</option>
+                                            <option>返回下月</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <ul class="c_week">
+                                    <li>一</li>
+                                    <li>二</li>
+                                    <li>三</li>
+                                    <li>四</li>
+                                    <li>五</li>
+                                    <li>六</li>
+                                    <li>日</li>
+                                </ul>
+                                <table class="cr_table">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><p>1</p><p class="cr_holiday">愚人节</p></td>
+                                        <td><p class="cr_holiday">2</p><p>廿五</p></td>
+                                        <td><p class="cr_holiday">3</p><p>廿六</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>4</p><p>廿七</p></td>
+                                        <td><p>5</p><p class="cr_holiday">清明</p></td>
+                                        <td><p>6</p><p>廿九</p></td>
+                                        <td><p>7</p><p>三月</p></td>
+                                        <td><p>8</p><p>初二</p></td>
+                                        <td class="cr_selected"><p class="cr_holiday">9</p><p>初三</p></td>
+                                        <td><p class="cr_holiday">10</p><p>初四</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>11</p><p>初五</p></td>
+                                        <td class="cr_selected"><p>12</p><p>初六</p></td>
+                                        <td><p>13</p><p>初七</p></td>
+                                        <td><p>14</p><p>初八</p></td>
+                                        <td><p>15</p><p>初九</p></td>
+                                        <td><p class="cr_holiday">16</p><p>初十</p></td>
+                                        <td><p class="cr_holiday">17</p><p>十一</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>18</p><p>十二</p></td>
+                                        <td class="cr_selected"><p>19</p><p>十三</p></td>
+                                        <td><p>20</p><p>十四</p></td>
+                                        <td><p>21</p><p>十五</p></td>
+                                        <td><p>22</p><p>十六</p></td>
+                                        <td><p class="cr_holiday">23</p><p>十七</p></td>
+                                        <td><p class="cr_holiday">24</p><p>十八</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>25</p><p>十九</p></td>
+                                        <td><p>26</p><p>廿十</p></td>
+                                        <td><p>27</p><p>廿一</p></td>
+                                        <td><p>28</p><p>廿二</p></td>
+                                        <td><p>29</p><p>廿三</p></td>
+                                        <td><p class="cr_holiday">30</p><p>廿四</p></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="ranking">
+                            <h3>汽车行业品牌榜</h3>
+                            <table>
+                                <tr>
+                                    <th>排名</th>
+                                    <th>品牌</th>
+                                    <th class="cr_none3">搜索指数</th>
+                                    <th class="cr_none"></th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>大众</td>
+                                    <td><span>48912001</span></td>
+                                    <td  class="cr_none"><div class="cr_bar"><div class="cr_one"></div></div></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>丰田</td>
+                                    <td><span>29307333</span></td>
+                                    <td class="cr_none"><div class="cr_bar"><div class="cr_two"></div></div></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>奥迪</td>
+                                    <td><span>23139070</span></td>
+                                    <td class="cr_none"><div class="cr_bar"><div class="cr_three"></div></div></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>本田</td>
+                                    <td><span>22885564</span></td>
+                                    <td class="cr_none"><div class="cr_bar"><div class="cr_four"></div></div></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>福特</td>
+                                    <td><span>22324792</span></td>
+                                    <td class="cr_none"><div class="cr_bar"><div class="cr_five"></div></div></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>宝马</td>
+                                    <td><span>2144077</span></td>
+                                    <td class="cr_none"><div class="cr_bar"><div class="cr_six"></div></div></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>现代</td>
+                                    <td><span>20114969</span></td>
+                                    <td class="cr_none"><div class="cr_bar"><div class="cr_seven"></div></div></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>起亚</td>
+                                    <td><span>19251680</span></td>
+                                    <td class="cr_none"><div class="cr_bar"><div class="cr_eight"></div></div></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>奔驰</td>
+                                    <td><span>19172837</span></td>
+                                    <td class="cr_none"><div class="cr_bar"><div class="cr_nine"></div></div></td>
+                                </tr>
+                                <tr class="cr_last">
+                                    <td>10</td>
+                                    <td>别克</td>
+                                    <td><span>18544027</span></td>
+                                    <td class="cr_none"><div class="cr_bar"><div class="cr_ten"></div></div></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
